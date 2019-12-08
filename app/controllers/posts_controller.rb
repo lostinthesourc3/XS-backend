@@ -14,7 +14,7 @@ class PostsController < ApplicationController
         if post.save
             render json: post
         else
-            render json: {message: "ERROR 406!", errors: post.errors.full_messages}, status 406
+            render json: {message: "ERROR 406!", errors: post.errors.full_messages}, status: 406
         end
     end
 
